@@ -46,7 +46,7 @@ metadata.create_all(engine)
 
 c = engine.connect()
 
-provider = WeatherProvider('I3D60I88UB6KPSDAVGK38HNP5')
+provider = WeatherProvider('EWLYGPYQPMM6CASTQXW4YH9KU')
 c.execute(weather.insert(), provider.get_data('Volgograd,Russia', '2020-09-20', '2020-09-29'))
 
 for row in c.execute(select([weather])):
